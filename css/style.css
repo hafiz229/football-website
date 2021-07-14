@@ -7,7 +7,8 @@ Navigation Section
 ------------------- */
 .top-section {
   background-color: #2d25a0;
-  padding: 42px 124px 86px 156px;
+  /* padding: 42px 124px 86px 156px; */
+  padding: 42px 10% 86px 10%;
   margin-bottom: 70px;
 }
 .top-section:hover img {
@@ -56,13 +57,15 @@ Intro Section
   font-size: 3.5em;
   color: white;
   font-weight: 700;
-  width: 420px;
+  /* width: 420px; */
+  width: 100%;
 }
 #watch {
   width: 168px;
 }
 .intro-banner img {
-  width: 556.01px;
+  /* width: 556.01px; */
+  width: 100%;
   height: 438px;
 }
 /* --------------
@@ -101,8 +104,10 @@ Highlights Section
   display: flex;
   justify-content: space-between;
   /* padding: 42px 124px 86px 156px; */
-  padding-right: 124px;
-  padding-left: 156px;
+  /* padding-right: 124px;
+  padding-left: 156px; */
+  padding-left: 10%;
+  padding-right: 10%;
   margin-bottom: 70px;
 }
 .higlight-intro h1 {
@@ -147,27 +152,62 @@ Media Queries
   .highlight {
     width: 100%;
   }
-  .nav-bar,
+  .top-menu a {
+    visibility: hidden;
+  }
+  #login {
+    padding: 10px 24px;
+    width: 60%;
+  }
+  .intro,
+  .higlight-intro {
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .intro-speech {
+    padding-bottom: 30px;
+  }
+  .courses,
   .players {
     grid-template-columns: 1fr;
   }
-  .intro,
-  .player,
-  .higlight-intro {
-    flex-direction: column;
+  .highlight-detail,
+  .highlight-banner img {
+    width: 100%;
   }
 }
 /* Tablet devices */
 @media only screen and (min-width: 688px) and (max-width: 992px) {
   .nav-bar .highlight {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .top-menu a {
+    visibility: hidden;
+  }
+  #login {
+    padding: 10px 24px;
+    width: 168px;
   }
   .intro,
+  .higlight-intro {
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .intro-speech {
+    padding-bottom: 30px;
+  }
   .players,
   .courses {
     grid-template-columns: repeat(2, 1fr);
   }
-  .higlight-intro {
-    flex-direction: column;
+  .highlight-detail,
+  .highlight-banner img {
+    width: 100%;
   }
 }
