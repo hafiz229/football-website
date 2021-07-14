@@ -143,14 +143,15 @@ Media Queries
 -----------------*/
 /* Mobile Devices */
 @media only screen and (max-width: 688px) {
-  .top-section,
+  .nav-bar,
   .highlight {
     width: 100%;
   }
-  .top-section,
+  .nav-bar,
   .players {
     grid-template-columns: 1fr;
   }
+  .intro,
   .player,
   .higlight-intro {
     flex-direction: column;
@@ -158,14 +159,15 @@ Media Queries
 }
 /* Tablet devices */
 @media only screen and (min-width: 688px) and (max-width: 992px) {
-  .top-section .highlight {
+  .nav-bar .highlight {
     width: 100%;
   }
+  .intro,
   .players,
   .courses {
     grid-template-columns: repeat(2, 1fr);
   }
   .higlight-intro {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 }
